@@ -1,3 +1,5 @@
+# By Elliot Marshall, 815277391
+
 import concurrent.futures   #   for ThreadPoolExecutor
 import threading            #   for threading
 from threading import Lock, Thread  #   also for threading
@@ -47,7 +49,7 @@ def threading_function(file_lock, screen_lock, first_name):
     file_lock.release()
 
 
-# reset mutex rules at each run
+# reset mutexrules.txt at each run
 fp = open("mutexrules.txt", "w",1)
 fp.write("")
 fp.close()
@@ -57,7 +59,7 @@ file_lock = Lock()
 screen_lock = Lock()
 length = len(sys.argv)
 #   bad functions for demonstraiting how to create deadlock in current paradigm
-#   uncomment if you want
+#   uncomment if you want to break something
 #bad_function(screen_lock)
 #bad_function2(file_lock)
 
